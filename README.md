@@ -25,9 +25,17 @@ this is a adapter for DialogFragment!
 
    Add it in your root build.gradle at the end of repositories:
 
-   
+   ```groovy
+   repositories {
+           jcenter()
+       }
+   ```
 
-   Add the dependency
+   Add dependencies
+
+   ```
+   implementation 'com.murphy.appcompat:dialogfragment:1.0.0'
+   ```
 
    
 
