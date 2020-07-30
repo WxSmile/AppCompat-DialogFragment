@@ -1,0 +1,34 @@
+apply plugin: 'com.jfrog.bintray'
+
+version = '1.0.3'
+
+def props = new Properties()
+def inputStream = project.rootProject.file('local.properties').newDataInputStream()
+props.load( inputStream )
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+// Bintray
+bintray {
+    user = props.getProperty("bintray.user")
+    key = props.getProperty("bintray.apikey")
+
+    pkg {
+        repo = 'maven'
+        name = 'Appcompat-DialogFragment'
+        configurations = ['archives']
+        desc = 'An android library.'
+        websiteUrl = 'https://github.com/WxSmile/AppCompatDialogFragment'
+        vcsUrl = 'https://github.com/WxSmile/AppCompatDialogFragment.git'
+        licenses = ["Apache-2.0"]
+        publish = true
+        publicDownloadNumbers = true
+    }
+}

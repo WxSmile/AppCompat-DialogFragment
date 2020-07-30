@@ -27,8 +27,8 @@ this is a adapter for DialogFragment!
 
    ```groovy
    repositories {
-           jcenter()
-       }
+       jcenter()
+   }
    ```
 
    Add dependencies
@@ -38,6 +38,14 @@ this is a adapter for DialogFragment!
    ```
 
    
+
+   library module  is full kotlin language, so it need add mateial dependencies when used that because if dont add this you can seeing the Kotlin issue  [KT-31052](https://youtrack.jetbrains.com/issue/KT-31052)
+
+   ```
+   implementation 'com.google.android.material:material:1.1.0'
+   ```
+
+   > **if you can fix it, commit issue!**
 
 3. Use  AppCompatDialogFragmentAdapter
 
@@ -97,7 +105,9 @@ this is a adapter for DialogFragment!
    normalBottomSheetFragment.show(supportFragmentManager, "bottom")
    ```
 
+
+
 ### More 
 
-- look up source code!
+- see code source!
 

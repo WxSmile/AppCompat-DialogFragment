@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.murphy.appcompat'
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.murphy.appcompat'
+                artifactId 'dialogfragment'
+                name 'Appcompat-DialogFragment'
+                description 'An android library.'
+                url 'https://github.com/WxSmile/AppCompatDialogFragment'
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'wxsmile'
+                        name 'Murphy'
+                        email '479238221@qq.com'
+                    }
+                }
+
+                scm {
+                    connection 'https://github.com/WxSmile/AppCompatDialogFragment.git'
+                    developerConnection 'https://github.com/WxSmile/AppCompatDialogFragment.git'
+                    url 'https://github.com/WxSmile/AppCompatDialogFragment'
+                }
+            }
+        }
+    }
+}
