@@ -39,7 +39,7 @@ this is a adapter for DialogFragment!
 
    
 
-   library module  is full kotlin language, so it need add mateial dependencies when used that because if dont add this you can seeing the Kotlin issue  [KT-31052](https://youtrack.jetbrains.com/issue/KT-31052)
+   library module  is full kotlin language, so it need add material dependencies when used that because if dont add this you can seeing the Kotlin issue  [KT-31052](https://youtrack.jetbrains.com/issue/KT-31052)
 
    ```
    implementation 'com.google.android.material:material:1.1.0'
