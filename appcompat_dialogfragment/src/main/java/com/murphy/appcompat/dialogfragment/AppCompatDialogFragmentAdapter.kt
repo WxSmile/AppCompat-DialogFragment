@@ -51,15 +51,22 @@ abstract class AppCompatDialogFragmentAdapter<DB : ViewDataBinding>(marginRatio:
 
         dialog?.window?.let {
             val layoutParams = it.attributes
-            val windowManager =
-                requireContext().getSystemService(Context.WINDOW_SERVICE) as WindowManager
-            val displayMetrics = DisplayMetrics()
-            windowManager.defaultDisplay.getMetrics(displayMetrics)
-            layoutParams.width = (displayMetrics.widthPixels * (1 - horizontalMarginRatio)).toInt()
+            layoutParams.width = getWindowWidth()
             layoutParams.gravity = Gravity.CENTER
             it.attributes = layoutParams
         }
     }
+
+    private fun getWindowWidth(): Int {
+        val requireContext = requireContext()
+        val windowManager = requireContext.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
+        val marginHorizontal = getMarginHorizontal()
+        return (displayMetrics.widthPixels - marginHorizontal * 2).toInt()
+    }
+
+    abstract fun getMarginHorizontal(): Float
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return AppCompatDialogAdapter(context, theme, isCancelable)

@@ -34,7 +34,7 @@ this is a adapter for DialogFragment!
    Add dependencies
 
    ```
-   implementation 'com.murphy.appcompat:dialogfragment:1.0.3'
+   implementation 'com.murphy.appcompat:dialogfragment:1.0.4'
    ```
 
    
