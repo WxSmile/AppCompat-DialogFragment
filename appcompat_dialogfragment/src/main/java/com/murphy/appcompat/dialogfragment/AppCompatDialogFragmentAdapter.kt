@@ -14,11 +14,9 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
 import com.murphy.appcompat.dialog.AppCompatDialogAdapter
 
-abstract class AppCompatDialogFragmentAdapter<DB : ViewDataBinding>(marginRatio: Float = 0.2f) :
-    AppCompatDialogFragment() {
+abstract class AppCompatDialogFragmentAdapter<DB : ViewDataBinding> : AppCompatDialogFragment() {
 
     private var dataBinding: DB? = null
-    private val horizontalMarginRatio: Float = marginRatio
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
