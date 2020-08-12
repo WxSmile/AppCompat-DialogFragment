@@ -34,7 +34,7 @@ this is a adapter for DialogFragment!
    Add dependencies
 
    ```
-   implementation 'com.murphy.appcompat:dialogfragment:1.0.4'
+   implementation 'com.murphy.appcompat:dialogfragment:1.0.5'
    ```
 
    
@@ -42,7 +42,7 @@ this is a adapter for DialogFragment!
    library module  is full kotlin language, so it need add material dependencies when used that because if dont add this you can seeing the Kotlin issue  [KT-31052](https://youtrack.jetbrains.com/issue/KT-31052)
 
    ```
-   implementation 'com.google.android.material:material:1.1.0'
+   implementation 'com.google.android.material:material:1.2.0'
    ```
 
    > **if you can fix it, commit issue!**
@@ -52,8 +52,8 @@ this is a adapter for DialogFragment!
    Define your dialog fragment with you needed `bindLayout` and `initView`
 
    ```kotlin
-   class NormalDialogFragment(marginRatio: Float) :
-       AppCompatDialogFragmentAdapter<DialogFragmentNormalBinding>(marginRatio) {
+   class NormalDialogFragment() :
+       AppCompatDialogFragmentAdapter<DialogFragmentNormalBinding> {
    
        override fun initView(dataBinding: DialogFragmentNormalBinding) {
    
@@ -71,7 +71,7 @@ this is a adapter for DialogFragment!
    Use
 
    ```kotlin
-   val normalDialogFragment = NormalDialogFragment(0.05f)
+   val normalDialogFragment = NormalDialogFragment()
    normalDialogFragment.isCancelable = false
    normalDialogFragment.show(supportFragmentManager, "normal")
    ```
