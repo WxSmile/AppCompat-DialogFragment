@@ -3,7 +3,7 @@
 
 ### Introduction
 
-this is a adapter for DialogFragment!
+This is a adapter for DialogFragment!
 
 ### Useage
 
@@ -109,5 +109,5 @@ this is a adapter for DialogFragment!
 
 ### More 
 
-- see code source!
+- see source code!
 
